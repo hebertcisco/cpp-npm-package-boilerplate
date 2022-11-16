@@ -1,4 +1,6 @@
-export { Uuid } from './helpers/uuid';
-import uuid from './helpers/uuid';
+import helloNative from './imports/hello.native';
 
-export default uuid;
+export { HelloNative } from './imports/hello.native';
+export type { IHelloNative } from './imports/hello.native';
+
+helloNative.hello('world')
