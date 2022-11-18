@@ -32,7 +32,7 @@
   "homepage": "https://github.com/hebertcisco/cpp-npm-package-boilerplate#readme",
   "devDependencies": {
     "@types/bindings": "^1.5.1",
-    "@types/jest": "29.0.3",
+    "@types/jest": "29.2.0",
     "@typescript-eslint/eslint-plugin": "5.38.0",
     "@typescript-eslint/parser": "5.38.0",
     "eslint": "8.23.1",
