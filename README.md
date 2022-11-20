@@ -36,6 +36,26 @@
 
 ## Getting started
 
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
+[![codecov](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate/branch/main/graph/badge.svg?token=3N411UTGD2)](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
+
+[![Node.js build and publish package](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/npm-publish.yml)
+
+[![Running Code Coverage](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/coverage.yml/badge.svg)](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/coverage.yml)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=bugs)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Nodejs](https://img.shields.io/badge/Nodejs-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/en/)
+[![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
+
+[![NPM](https://img.shields.io/badge/NPM-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
+[![Free. Built on open source. Runs everywhere.](https://img.shields.io/badge/VS_Code-0078D4?style=flat&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white)](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions)
+
 ### Installation(Example purposes)
 
 ```bash
