@@ -1,5 +1,5 @@
 import bindings from 'bindings';
 
-type Base = (string: string) => string;
+type THelloNative = (string: string) => string;
 
-export const helloNative: Base = bindings('hello.node').hello;
+export const helloNative: THelloNative = bindings('hello.node').hello;
