@@ -1,7 +1,7 @@
 <p align="center">
- <img width="100px" src="https://raw.githubusercontent.com/hebertcisco/cpp-npm-package-boilerplate/main/.github/images/favicon512x512-npm.png" align="center" alt=":package: cpp-npm-package-boilerplate" />
+ <img width="100px" src="https://raw.githubusercontent.com/hebertcisco/cpp-npm-package-boilerplate/main/.github/images/favicon512x512-cpp-npm-package-boilerplate.svg" align="center" alt=":package: cpp-npm-package-boilerplate" />
  <h2 align="center">:package: cpp-npm-package-boilerplate</h2>
- <p align="center">TypeScript NPM Module Boilerplate</p>
+ <p align="center">A boilerplate for creating a C++ npm package</p>
   <p align="center">
     <a href="https://github.com/hebertcisco/cpp-npm-package-boilerplate/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/hebertcisco/cpp-npm-package-boilerplate?style=flat&color=336791" />
@@ -25,45 +25,79 @@
   </p>
  <h3 align="center">Systems on which it has been tested:</h3>
  <p align="center">
-   <a href="https://www.apple.com/br/macos/">
-      <img alt="Macos" src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white&style=flat" />
-    </a>
     <a href="https://ubuntu.com/download">
       <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white&style=flat" />
     </a>
-    <a href="https://www.microsoft.com/pt-br/windows/">
-      <img alt="Windows" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white&style=flat" />
-    </a>
   </p>
+
 <p align="center">Did you like the project? Please, considerate <a href="https://www.buymeacoffee.com/hebertcisco">a donation</a> to help improve!</p>
 
-<p align="center"><strong>TypeScript NPM Module Boilerplate</strong>✨</p>
+<p align="center"><strong>A boilerplate for creating a C++ npm package</strong>✨</p>
 
+## Getting started
 
-# Getting started
-
-## Installation
-
-> Clone this repository: `git clone https://github.com/hebertcisco/cpp-npm-package-boilerplate`
-
-### Open the directory and run the script line:
+### Installation(Example purposes)
 
 ```bash
-cd cpp-npm-package-boilerplate 
-```
-```bash
-npm i  # or yarn
-```
-```bash
-rm -rf .git && git init && git add . && git commit -m "Initial commit" #Optional
-```
-Or create use the button "Use this template"
 
-Edit the Icon on Figma:
+> Install with yarn or npm: `yarn` or `npm`:
 
-<a href="https://www.figma.com/file/vpevGX3j9tmtW8OyLQ9eUm/cpp-npm-package-boilerplate-icon?node-id=0%3A1">
-   <img alt="Figma Icon" src="https://raw.githubusercontent.com/hebertcisco/cpp-npm-package-boilerplate/main/.github/images/figma-badge.png"/>
-</a>
+```bash
+# yarn
+yarn add cpp-npm-package-boilerplate
+```
+
+```bash
+# npm
+npm i cpp-npm-package-boilerplate --save
+```
+
+### Usage example
+
+```js
+import { helloNative } from 'cpp-npm-package-boilerplate';
+
+helloNative('World'); // Hello World
+```
+
+> **Note:** This is example is a binding of the C++ function `helloNative` to the JavaScript function `helloNative`.
+
+#### C++ function
+
+```cpp
+#include <napi.h>
+
+Napi::String hello(const Napi::CallbackInfo& info) {
+    Napi::Env env = info.Env();
+    Napi::String name = info[0].As<Napi::String>();
+    return Napi::String::New(env, "Hello " + name.Utf8Value());
+}
+
+Napi::Object Init(Napi::Env env, Napi::Object exports) {
+    exports.Set(Napi::String::New(env, "hello"), Napi::Function::New(env, hello));
+    return exports;
+}
+
+NODE_API_MODULE(hello, Init)
+
+```
+
+#### JavaScript function
+
+```mjs
+import bindings from 'bindings';
+export const helloNative = bindings('hello.node').hello;
+```
+
+#### TypeScript implementation
+
+```ts
+import bindings from 'bindings';
+
+type THelloNative = (string: string) => string;
+
+export const helloNative: THelloNative = bindings('hello.node').hello;
+```
 
 ## 🤝 Contributing
 
@@ -78,8 +112,6 @@ Or buy me a coffee 🙌🏾
 <a href="https://www.buymeacoffee.com/hebertcisco">
     <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=hebertcisco&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff" />
 </a>
-
-[![codecov](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate/branch/main/graph/badge.svg?token=Q9fr548J0D)](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate)
 
 ## 📝 License
 
