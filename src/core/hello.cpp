@@ -1,17 +1,14 @@
-#include "addon.h"
+#include <napi.h>
 
-Hello::Hello() : Nan::ObjectWrap()
-{
-    TRACE("Hello::Constructor");
+Napi::String hello(const Napi::CallbackInfo& info) {
+    Napi::Env env = info.Env();
+    Napi::String name = info[0].As<Napi::String>();
+    return Napi::String::New(env, "Hello " + name.Utf8Value());
 }
 
-NAN_METHOD(Hello::HelloMessage)
-{
-    TRACE("Hello::HelloMessage");
-    Hello *self = NODE_THIS();
-    if (info.Length() < 1 || !info[0]->IsString())
-    {
-        Nan::ThrowTypeError("First argument must be a string");
-        return;
-    }
+Napi::Object Init(Napi::Env env, Napi::Object exports) {
+    exports.Set(Napi::String::New(env, "hello"), Napi::Function::New(env, hello));
+    return exports;
 }
+
+NODE_API_MODULE(hello, Init)
