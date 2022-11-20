@@ -38,8 +38,6 @@
 
 ### Installation(Example purposes)
 
-```bash
-
 > Install with yarn or npm: `yarn` or `npm`:
 
 ```bash
