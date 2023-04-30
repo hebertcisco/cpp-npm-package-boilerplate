@@ -1,9 +1,9 @@
 {
   "name": "cpp-npm-package-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A boilerplate for creating a C++ npm package",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.(js|ts)\"",
@@ -43,7 +43,7 @@
     "typescript": "4.8.3"
   },
   "files": [
-    "lib/**/*"
+    "build/**/*"
   ],
   "gypfile": true,
   "dependencies": {
