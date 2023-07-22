@@ -1,6 +1,6 @@
 {
   "name": "cpp-npm-package-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A boilerplate for creating a C++ npm package",
   "main": "build/index.js",
   "types": "build/index.d.ts",
