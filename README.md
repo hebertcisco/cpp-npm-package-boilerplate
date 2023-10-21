@@ -36,17 +36,9 @@
 
 ## Getting started
 
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
-
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
-[![codecov](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate/branch/main/graph/badge.svg?token=3N411UTGD2)](https://codecov.io/gh/hebertcisco/cpp-npm-package-boilerplate)
-
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
-
 [![Node.js build and publish package](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/npm-publish.yml)
 
 [![Running Code Coverage](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/coverage.yml/badge.svg)](https://github.com/hebertcisco/cpp-npm-package-boilerplate/actions/workflows/coverage.yml)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=hebertcisco_cpp-npm-package-boilerplate&metric=bugs)](https://sonarcloud.io/summary/new_code?id=hebertcisco_cpp-npm-package-boilerplate)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Nodejs](https://img.shields.io/badge/Nodejs-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/en/)
@@ -75,7 +67,7 @@ npm i cpp-npm-package-boilerplate --save
 ```js
 import { helloNative } from 'cpp-npm-package-boilerplate';
 
-helloNative('World'); // Hello World
+console.log(helloNative('C++')); // Hello World
 ```
 
 > **Note:** This is example is a binding of the C++ function `helloNative` to the JavaScript function `helloNative`.
@@ -85,19 +77,20 @@ helloNative('World'); // Hello World
 ```cpp
 #include <napi.h>
 
-Napi::String hello(const Napi::CallbackInfo& info) {
+Napi::String Method(const Napi::CallbackInfo &info)
+{
     Napi::Env env = info.Env();
-    Napi::String name = info[0].As<Napi::String>();
-    return Napi::String::New(env, "Hello " + name.Utf8Value());
+    return Napi::String::New(env, "world");
 }
 
-Napi::Object Init(Napi::Env env, Napi::Object exports) {
-    exports.Set(Napi::String::New(env, "hello"), Napi::Function::New(env, hello));
+Napi::Object Init(Napi::Env env, Napi::Object exports)
+{
+    exports.Set(Napi::String::New(env, "hello"),
+                Napi::Function::New(env, Method));
     return exports;
 }
 
 NODE_API_MODULE(hello, Init)
-
 ```
 
 #### JavaScript function
@@ -133,5 +126,5 @@ Or buy me a coffee 🙌🏾
 
 ## 📝 License
 
-Copyright © 2022 [Hebert F Barros](https://github.com/hebertcisco).<br />
+Copyright © 2023 [Hebert F Barros](https://github.com/hebertcisco).<br />
 This project is [MIT](LICENSE) licensed.
