@@ -1,6 +1,6 @@
 {
   "name": "cpp-npm-package-boilerplate",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "description": "A boilerplate for creating a C++ npm package",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/hebertcisco/cpp-npm-package-boilerplate#readme",
   "devDependencies": {
-    "@types/bindings": "^1.5.1",
+    "@types/bindings": "^1.5.3",
     "@types/jest": "29.0.3",
     "@typescript-eslint/eslint-plugin": "5.38.0",
     "@typescript-eslint/parser": "5.42.0",
