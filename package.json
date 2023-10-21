@@ -22,7 +22,16 @@
   },
   "keywords": [
     "boilerplate",
-    "typescript"
+    "typescript",
+    "n-api",
+    "napi",
+    "addon",
+    "native",
+    "bindings",
+    "c",
+    "c++",
+    "nan",
+    "node-addon-api"
   ],
   "author": "Hebert Cisco",
   "license": "MIT",
@@ -43,8 +52,13 @@
     "typescript": "4.8.3"
   },
   "files": [
+    "package-support.json",
     "build/**/*"
   ],
+  "support": true,
+  "engines": {
+    "node": "^16 || ^18 || >= 20"
+  },
   "gypfile": true,
   "dependencies": {
     "bindings": "^1.5.0",
