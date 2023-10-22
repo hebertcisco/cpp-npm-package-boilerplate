@@ -6,6 +6,9 @@
 *.cmake linguist-vendored
 *CMakeLists.txt linguist-vendored
 
+*.cmake linguist-language=cpp
+*.MakeLists.txt  linguist-language=cpp
+
 *.cc linguist-language=cpp
 *.h linguist-language=cpp
 *.c linguist-language=cpp
