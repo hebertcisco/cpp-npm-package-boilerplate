@@ -8,6 +8,7 @@
 
 *.cmake linguist-language=cpp
 *.MakeLists.txt  linguist-language=cpp
+*Makefile  linguist-language=cpp
 
 *.cc linguist-language=cpp
 *.h linguist-language=cpp
