@@ -67,7 +67,7 @@ npm i cpp-npm-package-boilerplate --save
 ```js
 import { helloNative } from 'cpp-npm-package-boilerplate';
 
-console.log(helloNative('C++')); // Hello World
+console.log(helloNative('C++')); // Hello C++
 ```
 
 > **Note:** This is example is a binding of the C++ function `helloNative` to the JavaScript function `helloNative`.
