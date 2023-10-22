@@ -1,0 +1,20 @@
+* text=auto
+*.css linguist-vendored
+*.html linguist-vendored
+*.js linguist-vendored
+*.env linguist-vendored
+*.cmake linguist-vendored
+*CMakeLists.txt linguist-vendored
+
+*.cc linguist-language=cpp
+*.h linguist-language=cpp
+*.c linguist-language=cpp
+
+*.js linguist-language=cpp
+*.mjs linguist-language=cpp
+
+*.gyp linguist-language=cpp
+*.py linguist-language=cpp
+
+*.ts linguist-language=cpp
+*.Makefile linguist-language=cpp
